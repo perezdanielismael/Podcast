@@ -3,6 +3,9 @@
   padding: 0;
   margin: 0;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   width: 100%;
@@ -111,7 +114,7 @@ header .menu .container li a:hover {
 }
 
 header #btn-menu:checked ~ .menu {
-  margin-top: 258px;
+  margin-top: 130px;
 }
 
 header #btn-menu:checked ~ .image_menu {
@@ -430,16 +433,9 @@ footer .contactos {
   margin-bottom: 5vh;
 }
 
-footer .contactos img {
+footer .contactos .fa {
   cursor: pointer;
   width: 16px;
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-footer .contactos img:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
 }
 
 @media screen and (min-width: 680px) {
@@ -468,14 +464,20 @@ footer .contactos img:hover {
   header .image_menu {
     display: none;
   }
-  header .image_menu .fas .fa-bars .fa-2x {
+  header .image_menu .fa .fa-bars .fa-2x {
     display: none;
   }
   header .image_cruz {
     display: none;
   }
-  header .image_cruz .fas .fa-times .fa-2x {
+  header .image_cruz .fa .fa-times .fa-2x {
     display: none;
+  }
+  header #btn-menu:checked ~ .image_cruz {
+    display: none;
+  }
+  header #btn-menu:checked ~ .menu {
+    margin-top: 0;
   }
   header .menu {
     background: white;
